@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class PoseTracker : MonoBehaviour
     public Transform RightHandPos;
     public Transform RightElbowPos;
     public Transform RightShoulderPos;
+    public Transform RightShoulderRotation;
 
     public GameObject SnowballHolder;
     public GameObject SnowballPrefab;
@@ -52,22 +54,24 @@ public class PoseTracker : MonoBehaviour
 
     void CheckRightGestures()
     {
+        //position our rightShoulderTracker
+        RightShoulderRotation.position = RightShoulderPos.position;
+        RightShoulderRotation.LookAt(RightHandPos);
+
         Vector3 targetDir = RightHandPos.position - RightShoulderPos.position;
         float shoulderHandAngle = Vector3.Angle(targetDir, RightShoulderPos.forward);
 
         Vector3 targetDir2 = RightElbowPos.position - RightShoulderPos.position;
         float shoulderElbowAngle = Vector3.Angle(targetDir2, RightShoulderPos.forward);
 
-        RightShoulderPos.LookAt(RightHandPos);
+        float angle = Mathf.Abs(shoulderElbowAngle - shoulderHandAngle);
 
-        float newVal = Mathf.Abs(shoulderElbowAngle - shoulderHandAngle);
-
-        if ((newVal <= IcyBlastAngle) && AllowRightBlast)
+        if ((angle <= IcyBlastAngle) && AllowRightBlast)
         {
             //we are in a straight angle - now we need to make sure we're not just pointing down
             float shoulder = RightShoulderPos.position.x;
             float hand = RightHandPos.position.x;
-            if (Mathf.Abs(hand - shoulder) > ResetBlastDistance)
+            if (Mathf.Abs(hand - shoulder) > ResetBlastDistance * 2)
             {
                 FireIceBlast("right");
             }
@@ -94,7 +98,18 @@ public class PoseTracker : MonoBehaviour
 
         GameObject snowballObj = Instantiate(SnowballPrefab, SnowballHolder.transform, false);
         snowballObj.transform.position = startPos.position;
+        //snowballObj.transform.rotation = RightShoulderRotation.rotation;
 
+        Vector3 addDistanceToDirection = RightShoulderRotation.rotation * snowballObj.transform.forward * 10.0f;
+        Vector3 destination = snowballObj.transform.position + addDistanceToDirection;
+        Debug.Log("destination");
+        Debug.Log(destination);
+        snowballObj.transform.DOMove(destination, 10.0f);
+        /*
+        Vector3 targetPos = snowballObj.transform.position + RightShoulderPos.eulerAngles * 0.01f;
+        Debug.Log("target");
+        Debug.Log(targetPos);
+        snowballObj.transform.DOMove(targetPos, 10.0f);*/
 
         /*
         Vector3 newRotation = Vector3.RotateTowards(RightHandPos.forward, RightShoulderPos.transform.position, 100, 180);

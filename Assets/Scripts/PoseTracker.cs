@@ -17,10 +17,11 @@ public class PoseTracker : MonoBehaviour
     //the IcyBlastAngle ensures that an arm is in a straight enough angle from the shoulder to be considered in firing position
     public float IcyBlastAngle = 10.0f;
     public float ResetBlastDistance = 0.1f; //how close does our arm need to be to our shoulder in order to consider it reset? 
-
+    public float IcyBlastSpeed = 7.0f;
 
     //the IcyBlastTimeout forces the user to "reset" their firing power by putting their arm down
     private bool AllowRightBlast = true;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -102,19 +103,7 @@ public class PoseTracker : MonoBehaviour
 
         Vector3 addDistanceToDirection = RightShoulderRotation.rotation * snowballObj.transform.forward * 10.0f;
         Vector3 destination = snowballObj.transform.position + addDistanceToDirection;
-        Debug.Log("destination");
-        Debug.Log(destination);
-        snowballObj.transform.DOMove(destination, 10.0f);
-        /*
-        Vector3 targetPos = snowballObj.transform.position + RightShoulderPos.eulerAngles * 0.01f;
-        Debug.Log("target");
-        Debug.Log(targetPos);
-        snowballObj.transform.DOMove(targetPos, 10.0f);*/
-
-        /*
-        Vector3 newRotation = Vector3.RotateTowards(RightHandPos.forward, RightShoulderPos.transform.position, 100, 180);
-        RightHandPos.rotation = Quaternion.LookRotation(newRotation);
-        */
+        snowballObj.transform.DOMove(destination, IcyBlastSpeed);
     }
 
     void CheckBlastReset(string direction)

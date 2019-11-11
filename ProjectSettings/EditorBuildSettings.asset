@@ -4,8 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/aha-removal4.unity
-    guid: b53ca8fa4966f9646a8be66920ff63f3
-  m_configObjects: {}
+  m_Scenes: []

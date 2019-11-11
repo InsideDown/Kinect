@@ -103,7 +103,15 @@ public class PoseTracker : MonoBehaviour
 
         Vector3 addDistanceToDirection = RightShoulderRotation.rotation * snowballObj.transform.forward * 10.0f;
         Vector3 destination = snowballObj.transform.position + addDistanceToDirection;
-        snowballObj.transform.DOMove(destination, IcyBlastSpeed);
+        snowballObj.transform.DOMove(destination, IcyBlastSpeed).OnComplete(()=>
+        {
+            RemoveObj(snowballObj);
+        });
+    }
+
+    void RemoveObj(GameObject obj)
+    {
+        Destroy(obj);
     }
 
     void CheckBlastReset(string direction)

@@ -17,7 +17,7 @@ public class PoseTracker : MonoBehaviour
     //the IcyBlastAngle ensures that an arm is in a straight enough angle from the shoulder to be considered in firing position
     public float IcyBlastAngle = 10.0f;
     public float ResetBlastDistance = 0.1f; //how close does our arm need to be to our shoulder in order to consider it reset? 
-    public float IcyBlastSpeed = 7.0f;
+    public float IcyBlastSpeed = 7.0f; //larger the value, slower it will be
 
     //the IcyBlastTimeout forces the user to "reset" their firing power by putting their arm down
     private bool AllowRightBlast = true;

@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: 7a9939b467a6e0e4db4860576b19f7af
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature skeleton
+    100002: Camera.001
+    100004: Circle light
+    100006: Cylinder.029
+    100008: eye.L
+    100010: eye.L_end
+    100012: eye.R
+    100014: eye.R_end
+    100016: eyeCtr.L
+    100018: eyeCtr.L_end
+    100020: eyeCtr.R
+    100022: eyeCtr.R_end
+    100024: eyesCtr
+    100026: fingers.L
+    100028: fingers.L_end
+    100030: fingers.R
+    100032: fingers.R_end
+    100034: foot.L
+    100036: foot.R
+    100038: footCtrl.L
+    100040: footCtrl.R
+    100042: footIK.L
+    100044: footIK.L_end
+    100046: footIK.R
+    100048: footIK.R_end
+    100050: footRolCtrl.R
+    100052: footRolCtrl.R_end
+    100054: footRollCrl.L
+    100056: footRollCrl.L_end
+    100058: hand.L
+    100060: hand.R
+    100062: head
+    100064: helRol.L
+    100066: helRol.R
+    100068: hipsCtrl
+    100070: index1.L
+    100072: index1.R
+    100074: index2.L
+    100076: index2.R
+    100078: index3.L
+    100080: index3.L.001
+    100082: index3.L.001_end
+    100084: index3.R
+    100086: index3.R.001
+    100088: index3.R.001_end
+    100090: kneeCtrl_L
+    100092: kneeCtrl_L_end
+    100094: kneeCtrl_R
+    100096: kneeCtrl_R_end
+    100098: lowArm.L
+    100100: lowArm.R
+    100102: lowLeg.L
+    100104: lowLeg.R
+    100106: master Ctrl
+    100108: mid1.L
+    100110: mid1.R
+    100112: mid2.L
+    100114: mid2.R
+    100116: mid3.L
+    100118: mid3.L.001
+    100120: mid3.L.001_end
+    100122: mid3.R
+    100124: mid3.R.001
+    100126: mid3.R.001_end
+    100128: mouth
+    100130: mouth_end
+    100132: neck
+    100134: Plane.002
+    100136: Reflective circle golden
+    100138: Reflective circle silver
+    100140: Right middle light.000
+    100142: Right middle light.001
+    100144: ring1.L
+    100146: ring1.L.001
+    100148: ring1.R
+    100150: ring1.R.001
+    100152: ring2.L
+    100154: ring2.L.001
+    100156: ring2.R
+    100158: ring2.R.001
+    100160: ring3.L
+    100162: ring3.L.001
+    100164: ring3.L.002
+    100166: ring3.L.002_end
+    100168: ring3.L.003
+    100170: ring3.L.003_end
+    100172: ring3.R
+    100174: ring3.R.001
+    100176: ring3.R.002
+    100178: ring3.R.002_end
+    100180: ring3.R.003
+    100182: ring3.R.003_end
+    100184: root
+    100186: shoulder.L
+    100188: shoulder.R
+    100190: //RootNode
+    100192: skeleton
+    100194: Sphere
+    100196: Sphere.001
+    100198: spine.01
+    100200: spine.02
+    100202: thumb1.L
+    100204: thumb1.R
+    100206: thumb2.L
+    100208: thumb2.R
+    100210: thumb3.L
+    100212: thumb3.L_end
+    100214: thumb3.R
+    100216: thumb3.R_end
+    100218: toe.L
+    100220: toe.L.001
+    100222: toe.L.002
+    100224: toe.L.002_end
+    100226: toe.R
+    100228: toe.R.001
+    100230: toe.R.002
+    100232: toe.R.002_end
+    100234: toeRol.L
+    100236: toeRol.R
+    100238: Top light
+    100240: upArm.L
+    100242: upArm.R
+    100244: upLeg.L
+    100246: upLeg.R
+    400000: Armature skeleton
+    400002: Camera.001
+    400004: Circle light
+    400006: Cylinder.029
+    400008: eye.L
+    400010: eye.L_end
+    400012: eye.R
+    400014: eye.R_end
+    400016: eyeCtr.L
+    400018: eyeCtr.L_end
+    400020: eyeCtr.R
+    400022: eyeCtr.R_end
+    400024: eyesCtr
+    400026: fingers.L
+    400028: fingers.L_end
+    400030: fingers.R
+    400032: fingers.R_end
+    400034: foot.L
+    400036: foot.R
+    400038: footCtrl.L
+    400040: footCtrl.R
+    400042: footIK.L
+    400044: footIK.L_end
+    400046: footIK.R
+    400048: footIK.R_end
+    400050: footRolCtrl.R
+    400052: footRolCtrl.R_end
+    400054: footRollCrl.L
+    400056: footRollCrl.L_end
+    400058: hand.L
+    400060: hand.R
+    400062: head
+    400064: helRol.L
+    400066: helRol.R
+    400068: hipsCtrl
+    400070: index1.L
+    400072: index1.R
+    400074: index2.L
+    400076: index2.R
+    400078: index3.L
+    400080: index3.L.001
+    400082: index3.L.001_end
+    400084: index3.R
+    400086: index3.R.001
+    400088: index3.R.001_end
+    400090: kneeCtrl_L
+    400092: kneeCtrl_L_end
+    400094: kneeCtrl_R
+    400096: kneeCtrl_R_end
+    400098: lowArm.L
+    400100: lowArm.R
+    400102: lowLeg.L
+    400104: lowLeg.R
+    400106: master Ctrl
+    400108: mid1.L
+    400110: mid1.R
+    400112: mid2.L
+    400114: mid2.R
+    400116: mid3.L
+    400118: mid3.L.001
+    400120: mid3.L.001_end
+    400122: mid3.R
+    400124: mid3.R.001
+    400126: mid3.R.001_end
+    400128: mouth
+    400130: mouth_end
+    400132: neck
+    400134: Plane.002
+    400136: Reflective circle golden
+    400138: Reflective circle silver
+    400140: Right middle light.000
+    400142: Right middle light.001
+    400144: ring1.L
+    400146: ring1.L.001
+    400148: ring1.R
+    400150: ring1.R.001
+    400152: ring2.L
+    400154: ring2.L.001
+    400156: ring2.R
+    400158: ring2.R.001
+    400160: ring3.L
+    400162: ring3.L.001
+    400164: ring3.L.002
+    400166: ring3.L.002_end
+    400168: ring3.L.003
+    400170: ring3.L.003_end
+    400172: ring3.R
+    400174: ring3.R.001
+    400176: ring3.R.002
+    400178: ring3.R.002_end
+    400180: ring3.R.003
+    400182: ring3.R.003_end
+    400184: root
+    400186: shoulder.L
+    400188: shoulder.R
+    400190: skeleton
+    400192: //RootNode
+    400194: Sphere
+    400196: Sphere.001
+    400198: spine.01
+    400200: spine.02
+    400202: thumb1.L
+    400204: thumb1.R
+    400206: thumb2.L
+    400208: thumb2.R
+    400210: thumb3.L
+    400212: thumb3.L_end
+    400214: thumb3.R
+    400216: thumb3.R_end
+    400218: toe.L
+    400220: toe.L.001
+    400222: toe.L.002
+    400224: toe.L.002_end
+    400226: toe.R
+    400228: toe.R.001
+    400230: toe.R.002
+    400232: toe.R.002_end
+    400234: toeRol.L
+    400236: toeRol.R
+    400238: Top light
+    400240: upArm.L
+    400242: upArm.R
+    400244: upLeg.L
+    400246: upLeg.R
+    2000000: Camera.001
+    2100000: Material.003
+    2100002: White_dif
+    2100004: Chrome
+    2100006: Black
+    2100008: Circlelight
+    2100010: Material.008
+    2100012: Reflective circle golden
+    2100014: Reflective circle silver
+    2100016: L.middlelight
+    2100018: R.middlelight
+    2100020: Toplight
+    2300000: Circle light
+    2300002: Cylinder.029
+    2300004: Plane.002
+    2300006: Reflective circle golden
+    2300008: Reflective circle silver
+    2300010: Right middle light.000
+    2300012: Right middle light.001
+    2300014: Sphere
+    2300016: Sphere.001
+    2300018: Top light
+    3300000: Circle light
+    3300002: Cylinder.029
+    3300004: Plane.002
+    3300006: Reflective circle golden
+    3300008: Reflective circle silver
+    3300010: Right middle light.000
+    3300012: Right middle light.001
+    3300014: Sphere
+    3300016: Sphere.001
+    3300018: Top light
+    4300000: skeleton
+    4300002: Sphere.001
+    4300004: Sphere
+    4300006: Circle light
+    4300008: Cylinder.029
+    4300010: Plane.002
+    4300012: Reflective circle golden
+    4300014: Reflective circle silver
+    4300016: Right middle light.000
+    4300018: Right middle light.001
+    4300020: Top light
+    9500000: //RootNode
+    13700000: skeleton
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

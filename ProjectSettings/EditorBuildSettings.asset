@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/frozen2.unity
     guid: a072b3d7774342b45a89387de542ae7b
+  - enabled: 1
+    path: Assets/Scenes/MaskUserOutHalloween.unity
+    guid: acd51bd055d7eeb47b05c1714873ad14
   m_configObjects: {}

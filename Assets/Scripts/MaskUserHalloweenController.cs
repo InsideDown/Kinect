@@ -7,11 +7,22 @@ public class MaskUserHalloweenController : MonoBehaviour
 {
 
     public RawImage BackgroundRawImage;
+    public List<GameObject> ObjectsToHide = new List<GameObject>();
+    public GameObject Character;
+
+    private Vector3 CharacterScale;
+    private Vector3 HideCharacterScale = Vector3.zero;
 
     private void Awake()
     {
         if (BackgroundRawImage == null)
             throw new System.Exception("A BackgroundRawImage must be defined in MaskUserHalloweenController");
+
+        if (Character == null)
+            throw new System.Exception("A Character must be defined in MaskUserHalloweenController");
+
+        CharacterScale = Character.transform.localScale;
+        ShowCharacter(false);
     }
 
     private IEnumerator TakeSnapshot()
@@ -58,8 +69,50 @@ public class MaskUserHalloweenController : MonoBehaviour
         }
     }
 
+    private void HideObjects()
+    {
+        foreach(GameObject obj in ObjectsToHide)
+        {
+            obj.SetActive(false);
+        }
+    }
+
+    private void ShowCharacter(bool showCharBool = true)
+    {
+       if(showCharBool)
+        {
+            Character.transform.localScale = CharacterScale;
+        }
+        else
+        {
+            Character.transform.localScale = HideCharacterScale;
+        }
+    }
+
+    private void OnEnable()
+    {
+        EventManager.OnUserFoundEvent += EventManager_OnUserFoundEvent;
+        EventManager.OnAllUsersLostEvent += EventManager_OnAllUsersLostEvent;
+    }
+    private void OnDisable()
+    {
+        EventManager.OnUserFoundEvent -= EventManager_OnUserFoundEvent;
+        EventManager.OnAllUsersLostEvent -= EventManager_OnAllUsersLostEvent;
+    }
+
+    private void EventManager_OnAllUsersLostEvent()
+    {
+        ShowCharacter(false);
+    }
+
+    private void EventManager_OnUserFoundEvent()
+    {
+        ShowCharacter();
+    }
+
     public void OnCaptureScreenshot()
     {
+        HideObjects();
         CaptureImageFromKinect();
     }
 }

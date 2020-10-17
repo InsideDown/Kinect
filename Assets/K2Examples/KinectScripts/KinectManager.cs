@@ -3950,6 +3950,7 @@ public class KinectManager : MonoBehaviour
 						{
 							calibrationText.text = "";
 						}
+                        EventManager.Instance.UserFoundEvent();
 					}
 				}
 

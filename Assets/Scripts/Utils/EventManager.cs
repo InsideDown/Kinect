@@ -11,13 +11,17 @@ public class EventManager : Singleton<EventManager>
     public static event KinectAction OnUserFoundEvent;
     public static event KinectAction OnAllUsersLostEvent;
 
-    public delegate void VideoStartAction(string curVideoItem);
-    public static event VideoStartAction OnVideoStartEvent;
-    public static event VideoStartAction OnRingPlacedEvent;
+    public delegate void LightColorAction(string colorStr);
+    public static event LightColorAction OnLightColorEvent;
 
-    public delegate void KeyboardAction();
-    public static event KeyboardAction OnRedTeamWin;
-    public static event KeyboardAction OnGreenTeamWin;
+    public delegate void LightAction();
+    public static event LightAction OnLightTriggerEvent;
+
+    public void LightTriggerEvent()
+    {
+        if (OnLightTriggerEvent != null)
+            OnLightTriggerEvent();
+    }
 
     public void UserFoundEvent()
     {
@@ -31,27 +35,9 @@ public class EventManager : Singleton<EventManager>
             OnAllUsersLostEvent();
     }
 
-    public void RedTeamWin()
+    public void LightColorEvent(string colorStr)
     {
-        if (OnRedTeamWin != null)
-            OnRedTeamWin();
-    }
-
-    public void GreenTeamWin()
-    {
-        if (OnGreenTeamWin != null)
-            OnGreenTeamWin();
-    }
-
-    public void VideoStartEvent(string curVideoItem)
-    {
-        if (OnVideoStartEvent != null)
-            OnVideoStartEvent(curVideoItem);
-    }
-
-    public void RingPlacedEvent(string curVideoItem)
-    {
-        if (OnRingPlacedEvent != null)
-            OnRingPlacedEvent(curVideoItem);
+        if (OnLightColorEvent != null)
+            OnLightColorEvent(colorStr);
     }
 }
